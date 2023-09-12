@@ -1,7 +1,7 @@
 
 import {useState, useMemo} from "react"
 import './App.css';
-
+import Parent from "./useCallback/Parent";
 function App() {
   const [dark,setDark] = useState(false)
 const [number,setNumber]=useState(0)
@@ -14,19 +14,23 @@ const [number,setNumber]=useState(0)
   const slowFunc= (num)=>{
     console.log("start")
     for(let i =0;i<1000; i++){}
-    return num
+    return num 
   }
   const doubleNum = useMemo((number)=>{
     slowFunc(number)
   },[number])
   return (
-    <div className="App" style = {backStyle}>
+    <>
+    <Parent></Parent>
+{/* <div className="App" style = {backStyle}>
     <input type="number" value = {number} onChange={(e)=>{setNumber(parseInt(e.target.value))}} />
      <button onClick={()=>setDark(prev => !prev)}> Click me</button>
      <div>
       {doubleNum}
      </div>
-    </div>
+    </div> */}
+    </>
+    
   );
 }
 
