@@ -2,6 +2,7 @@
 import {useState, useMemo} from "react"
 import './App.css';
 import Parent from "./useCallback/Parent";
+import Index from "./useRef/Index";
 function App() {
   const [dark,setDark] = useState(false)
 const [number,setNumber]=useState(0)
@@ -21,7 +22,8 @@ const [number,setNumber]=useState(0)
   },[number])
   return (
     <>
-    <Parent></Parent>
+    <Index />
+    {/* <Parent></Parent> */}
 {/* <div className="App" style = {backStyle}>
     <input type="number" value = {number} onChange={(e)=>{setNumber(parseInt(e.target.value))}} />
      <button onClick={()=>setDark(prev => !prev)}> Click me</button>
