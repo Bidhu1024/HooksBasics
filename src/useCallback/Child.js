@@ -1,6 +1,6 @@
 import React,{memo} from 'react';
 
-const Child = () => {
+const Child = ({increment1,fun}) => {
     console.log("im in")
     return (
         <div>

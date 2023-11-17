@@ -22,7 +22,7 @@ const [number,setNumber]=useState(0)
   },[number])
   return (
     <>
-    <Index />
+    <Parent />
     {/* <Parent></Parent> */}
 {/* <div className="App" style = {backStyle}>
     <input type="number" value = {number} onChange={(e)=>{setNumber(parseInt(e.target.value))}} />
