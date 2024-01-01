@@ -4,7 +4,7 @@ import Child from './Child';
 
 const Parent = () => {
     const [increment, setIncrement] = useState(0)
-    const [increment1, setIncrement1] = useState([])
+    const [increment1, setIncrement1] = useState([]);
     const handleClick = () => {
         setIncrement(increment + 1)
     }
